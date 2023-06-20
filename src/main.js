@@ -27,8 +27,8 @@ const cardsHTML = dataArr.map((object) => {
 }
 
   //Se agregan las cartillas con la información
-  const cardsContainer = document.getElementById('cartillaContenedor');
-    cardsContainer.innerHTML = generateCards(dataArr);
+const cardsContainer = document.getElementById('cartillaContenedor');
+cardsContainer.innerHTML = generateCards(dataArr);
 
 //Ordenar por
 function sortby(){

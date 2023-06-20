@@ -33,10 +33,13 @@ export const sortData = {
      //ordena los atletas por nombre A - Z
      sortbyNameAtoZ: (data) => {
       data.sort((a, b) => {
-        if (a.name > b.name) {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+
+        if (nameA > nameB) {
           return 1;
        }
-        if (a.name < b.name) {
+        if (nameA < nameB) {
           return -1;
        }
        return 0;
@@ -45,22 +48,28 @@ export const sortData = {
      //ordena los atletas por nombre Z - A
      sortbyNameZtoA: (data) => {
       data.sort((a, b) => {
-        if (b.name > a.name) {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+
+        if (nameB > nameA) {
           return 1;
-       }
-        if (b.name < a.name) {
+        }
+        if (nameB < nameA) {
           return -1;
-       }
-       return 0;
-      })
+        }
+        return 0;
+        })
      },
      //ordena los datos por país A - Z
      sortbyCountryAtoZ:(data) => {
       data.sort((a, b) => {
-        if (a.team > b.team) {
+      const teamA = a.team.toLowerCase();
+      const teamB = b.team.toLowerCase();
+
+        if (teamA > teamB) {
           return 1;
        }
-        if (a.team < b.team) {
+        if (teamA < teamB) {
           return -1;
        }
        return 0;
@@ -69,10 +78,13 @@ export const sortData = {
      //ordena los datos por país Z - A
      sortbyCountryZtoA: (data) => {
       data.sort((a, b) => {
-        if (b.team > a.team) {
+      const teamA = a.team.toLowerCase();
+      const teamB = b.team.toLowerCase();
+
+        if (teamB > teamA) {
           return 1;
        }
-        if (b.team < a.team) {
+        if (teamB < teamA) {
           return -1;
        }
        return 0;
