@@ -30,8 +30,8 @@ function medalCount () {
     const counter = {};
   
     dataArr.forEach((athlete) => {
-      const nameAth = athlete.name;
-    
+    const nameAth = athlete.name;
+    const team = athlete.team;
       // Si el nombre se repite incrementa el recuento de medallas
       if (counter.hasOwnProperty(nameAth)) {
         if (counter[nameAth].hasOwnProperty(athlete.medal)) {
@@ -45,6 +45,7 @@ function medalCount () {
           Gold: 0,
           Silver: 0,
           Bronze: 0,
+          team,
         };
         counter[nameAth][athlete.medal] = 1;
       }
