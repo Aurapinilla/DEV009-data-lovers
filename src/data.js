@@ -1,3 +1,21 @@
+//% de atletas con cada tipo de medalla
+export function percentageMedals(medalCount){
+  const medalCount = {Gold, Silver, Bronze};
+  const goldCounter = medalCount.Gold;
+  const silverCounter = medalCount.Silver;
+  const bronzeCounter = medalCount.Bronze;
+
+  const goldPercent = (goldCounter/medalCount.length);
+  const silverPercent = (silverCounter/medalCount.length);
+  const bronzePercent = (bronzeCounter/medalCount.length);
+
+  return {
+    goldPercent,
+    silverPercent,
+    bronzePercent
+  }
+}
+
 //Top atletas con más medallas
 export function topAthletes(medalCount){
   const topMedals = Object.entries(medalCount)
