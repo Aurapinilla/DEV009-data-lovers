@@ -9,7 +9,13 @@
     background-color: #EBEBEB;
     height: 85px;
 }
-.contenedor .logo #logo2016 {
+.contenedor .heading1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 420px;
+}
+#logo2016 {
     line-height: 140px;
     height: 140px;
 }
