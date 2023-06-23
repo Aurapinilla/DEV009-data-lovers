@@ -1,4 +1,4 @@
-import {topAthletes} from './data.js';
+import { topAthletes } from './data.js';
 import data from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
@@ -53,7 +53,7 @@ function medalCount () {
   
     return counter;
   }
-  console.log("medcount", medalCount());
+  console.log("medcount", medCount());
   
   
   //Top 10 atletas

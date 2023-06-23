@@ -1,4 +1,4 @@
-import { filterTeam, sortData, filterGenM , filterGenF, topAthletes} from './data.js';
+import { filterTeam, sortData, filterGenM , filterGenF } from './data.js';
 import data from './data/athletes/athletes.js';
 import athletes from './data/athletes/athletes.js';
 
@@ -109,10 +109,6 @@ function fteamGF (genef) {
 }
 document.getElementById('f').addEventListener('click', ()=>
 cardsContainer.innerHTML = fteamGF(dataArr))
-
-
-
-
 
 
 

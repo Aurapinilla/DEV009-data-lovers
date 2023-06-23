@@ -1,19 +1,45 @@
-//% de atletas con cada tipo de medalla
-export function percentageMedals(medalCount){
-  const medalCount = {Gold, Silver, Bronze};
-  const goldCounter = medalCount.Gold;
-  const silverCounter = medalCount.Silver;
-  const bronzeCounter = medalCount.Bronze;
+//% de atletas con medalla de oro
+export function goldPercentage(medalCount){
+  const goldSum = medalCount.reduce((sum, entry) => sum + entry.Gold, 0);
+  const goldPercentage = (goldSum / medalCount.length) * 100;
+  return goldPercentage;
+  };
 
-  const goldPercent = (goldCounter/medalCount.length);
-  const silverPercent = (silverCounter/medalCount.length);
-  const bronzePercent = (bronzeCounter/medalCount.length);
+//% de atletas con medalla de plata
+export function silverPercentage(medalCount){
+  const silverSum = medalCount.reduce((sum, entry) => sum + entry.Silver, 0);
+  const silverPercentage = (silverSum / medalCount.length) * 100;
+  return silverPercentage;
+  };
 
-  return {
-    goldPercent,
-    silverPercent,
-    bronzePercent
-  }
+//% de atletas con medalla de bronce
+export function bronzePercentage(medalCount){
+  const bronzeSum = medalCount.reduce((sum, entry) => sum + entry.Bronze, 0);
+  const bronzePercentage = (bronzeSum / medalCount.length) * 100;
+  return bronzePercentage;
+  };
+
+//conteo medallas
+export function medCount(){
+  const medalCount = data.athletes.map((athlete) => {
+    const { name, medal } = athlete;
+    const count = {
+      Gold: 0,
+      Silver: 0,
+      Bronze: 0
+    };
+  
+    if (medal === "Gold") {
+      count.Gold = 1;
+    } else if (medal === "Silver") {
+      count.Silver = 1;
+    } else if (medal === "Bronze") {
+      count.Bronze = 1;
+    }
+  
+    return { name, ...count };
+  });
+  return medalCount;
 }
 
 //Top atletas con más medallas
@@ -21,8 +47,8 @@ export function topAthletes(medalCount){
   const topMedals = Object.entries(medalCount)
   .sort(([, a], [, b]) => {
     // se compara la suma total de medallas de cada atleta
-    const totalMedalsA = Object.values(a).reduce((sum, count) => sum + count, 0);
-    const totalMedalsB = Object.values(b).reduce((sum, count) => sum + count, 0);
+    const totalMedalsA = Object.values(a).reduce((medal, count) => medal + count, 0);
+    const totalMedalsB = Object.values(b).reduce((medal, count) => medal + count, 0);
 
     return totalMedalsB - totalMedalsA; // Ordenar de mayor a menor
   })
