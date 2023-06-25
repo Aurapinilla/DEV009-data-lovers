@@ -2,45 +2,56 @@
 export function goldPercentage(medalCount){
   const goldSum = medalCount.reduce((sum, entry) => sum + entry.Gold, 0);
   const goldPercentage = (goldSum / medalCount.length) * 100;
-  return goldPercentage;
+  return goldPercentage.toFixed(2);
   };
+
+// Lista de jugadores con medalla de Oro
+export function goldAthletes(medalsArr){
+  const goldNames = [];
+  for (let i=0; i<medalsArr.length; i++){
+    if(medalsArr[i].Gold > 0){
+      goldNames.push(medalsArr[i].name);
+    }
+  }
+  return goldNames;
+};
 
 //% de atletas con medalla de plata
 export function silverPercentage(medalCount){
   const silverSum = medalCount.reduce((sum, entry) => sum + entry.Silver, 0);
   const silverPercentage = (silverSum / medalCount.length) * 100;
-  return silverPercentage;
+  return silverPercentage.toFixed(2);
   };
+
+// Lista de jugadores con medalla de Plata
+export function silverAthletes(medalsArr){
+  const silverNames = [];
+  for (let i=0; i<medalsArr.length; i++){
+    if(medalsArr[i].Gold > 0){
+      silverNames.push(medalsArr[i].name);
+    }
+  }
+  return silverNames;
+};
 
 //% de atletas con medalla de bronce
 export function bronzePercentage(medalCount){
   const bronzeSum = medalCount.reduce((sum, entry) => sum + entry.Bronze, 0);
   const bronzePercentage = (bronzeSum / medalCount.length) * 100;
-  return bronzePercentage;
+  return bronzePercentage.toFixed(2);
   };
 
-//conteo medallas
-export function medCount(){
-  const medalCount = data.athletes.map((athlete) => {
-    const { name, medal } = athlete;
-    const count = {
-      Gold: 0,
-      Silver: 0,
-      Bronze: 0
-    };
-  
-    if (medal === "Gold") {
-      count.Gold = 1;
-    } else if (medal === "Silver") {
-      count.Silver = 1;
-    } else if (medal === "Bronze") {
-      count.Bronze = 1;
+// Lista de jugadores con medalla de Bronce
+export function bronzeAthletes(medalsArr){
+  const bronzeNames = [];
+  for (let i=0; i<medalsArr.length; i++){
+    if(medalsArr[i].Gold > 0){
+      bronzeNames.push(medalsArr[i].name);
     }
-  
-    return { name, ...count };
-  });
-  return medalCount;
-}
+  }
+  return bronzeNames;
+};
+
 
 //Top atletas con más medallas
 export function topAthletes(medalCount){

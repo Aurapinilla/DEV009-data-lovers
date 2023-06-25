@@ -1,4 +1,4 @@
-import { goldPercentage, silverPercentage, bronzePercentage } from './data.js';
+import { goldPercentage, silverPercentage, bronzePercentage, goldAthletes, silverAthletes, bronzeAthletes } from './data.js';
 import data from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
@@ -24,7 +24,56 @@ function medCount(){
     });
     return athletes;
   }console.log("meed", medCount());
+// En esta constante se almacena el resultado de la función para poder trabajar con esto después
+const medalsArr = medCount();
 
-  console.log("%", goldPercentage(medCount()));
-  console.log("%", silverPercentage(medCount()));
-  console.log("%", bronzePercentage(medCount()));
+//Se agregan los % correspondientes por cada tipo de medalla
+  document.getElementById("gold%").innerHTML = goldPercentage(medCount()) + " %";
+  document.getElementById("silver%").innerHTML = silverPercentage(medCount()) + " %";
+  document.getElementById("bronze%").innerHTML = bronzePercentage(medCount()) + " %";
+
+//Estas constantes almacenan los nombres de los atletas por medalla y el espacio en el HTML donde se va a crear la lista con el contenido
+const goldNames = goldAthletes(medalsArr);
+const goldNamesList = document.getElementById("goldNames");
+const silverNames = silverAthletes(medalsArr);
+const silverNamesList = document.getElementById("silverNames");
+const bronzeNames = bronzeAthletes(medalsArr);
+const bronzeNamesList = document.getElementById("bronzeNames");
+
+function athLists () {
+  goldNames.forEach((name) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = name;
+    goldNamesList.appendChild(listItem);
+  });
+
+  silverNames.forEach((name) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = name;
+    silverNamesList.appendChild(listItem);
+  });
+
+  bronzeNames.forEach((name) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = name;
+    bronzeNamesList.appendChild(listItem);
+  });
+
+};
+athLists();
+
+
+  //funcion if for each para que pase por la posicion [0] y si es >1 que traiga el nombre
+
+  console.log("03", medalsArr.length);
+
+  console.log("yas", goldAthletes(medalsArr));
+
+/*function nombresAth(){
+  for (let i=0; i<medalsArr.length; i++){
+    if (medalsArr[i].Gold > 0){
+      return medalsArr[i].name;
+    }
+  }
+}
+console.log("asap", nombresAth());*/
