@@ -1,70 +1,67 @@
-import { topAthletes } from './data.js';
+
 import data from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
-const dataArr = Object.values(data.athletes)
-
+const dataArr = (data.athletes)
 // Extrar los datos
-function generateCards(cards) {
-    const cardsHTML = cards.map((athlete) => {
-      const { name, medals, team } = athlete;
-      const medalsHTML = Object.entries(medals).map(([medal, count]) => {
-        return `<p><strong>${medal}:</strong> ${count}</p>`;
-      }).join('');
-  
-      // Verificar si el equipo existe antes de incluirlo en el HTML
-      const teamHTML = team ? `<p><strong>Team:</strong> ${team}</p>` : '';
-  
+  function newCards(datos) {
+    const cardsTop = datos.map((atleta) => {
+      const { name, team, gold, bronze, silver} = atleta;
       return `<div class="cartilla">
-        <p><strong>Name:</strong> ${name}</p>
-        ${medalsHTML}
-        ${teamHTML}
+        <p><strong>name:</strong> ${name}</p>
+        <p><strong>team:</strong> ${team}</p>
+        <p><strong>gold:</strong> ${gold}</p>
+        <p><strong>bronze:</strong> ${bronze}</p>
+        <p><strong>silver:</strong> ${silver}</p>
       </div>`;
-    });
+    })  
   
-    return cardsHTML.join('');
+    return cardsTop.join('');
   }
 
-//Conteo de medallas por atleta
-function medalCount () {
-    const counter = {};
+  //Sumar medallas
+ function recorrer(datos) {
+    const duplicados = [];
   
-    dataArr.forEach((athlete) => {
-    const nameAth = athlete.name;
-    const team = athlete.team;
-      // Si el nombre se repite incrementa el recuento de medallas
-      if (counter.hasOwnProperty(nameAth)) {
-        if (counter[nameAth].hasOwnProperty(athlete.medal)) {
-          counter[nameAth][athlete.medal] += 1;
-        } else {
-          counter[nameAth][athlete.medal] = 1;
+    for (let i = 0; i < datos.length; i++) {
+      const atletaActual = datos[i];
+      const name = atletaActual.name;
+      const team = atletaActual.team;
+      const medal = atletaActual.medal;
+  
+      let atletaExistente = duplicados.find((atleta) => atleta.name === name);
+  
+      if (atletaExistente) { atletaExistente.contador +=1;
+        if (medal === 'Bronze') {
+          atletaExistente.bronze += 1;
+        } else if (medal === 'Silver') {
+          atletaExistente.silver += 1;
+        } else if (medal === 'Gold') {
+          atletaExistente.gold += 1; 
         }
       } else {
-        // Si el nombre no existe crea una nueva entrada y cuenta 1 medalla
-        counter[nameAth] = {
-          Gold: 0,
-          Silver: 0,
-          Bronze: 0,
-          team,
+        const nuevoAtleta = {
+          name: name,
+          team: team,
+          gold: medal === 'Gold' ? 1 : 0,
+          silver: medal === 'Silver' ? 1 : 0,
+          bronze: medal === 'Bronze' ? 1 : 0,
+          contador:1,
         };
-        counter[nameAth][athlete.medal] = 1;
+        duplicados.push(nuevoAtleta);
       }
-    });
-  
-    return counter;
+    }
+    return duplicados;
   }
-  console.log("medcount", medCount());
-  
-  
-  //Top 10 atletas
-  function top10Athletes() {
-    const top10 = topAthletes(medalCount(dataArr))
-    const createHTML = generateCards(top10)
-    console.log("top10", top10);
-    return createHTML;
-  }
-  const topContent = document.getElementById("topContainer");
-  topContent.innerHTML = top10Athletes();
-  console.log("fin", top10Athletes());
 
-  //no pude agregar team sale undefined. poner diseño al boton de top 10
+//Ordenar de medallas con contador
+function topAthletes (datos) {
+  datos.sort((a,b) => b.contador - a.contador)
+  return datos.slice(0,10)
+}
+
+//mostrar en la div de top10
+const divTop = document.getElementById("topContainer")
+const misCartas = newCards(topAthletes(recorrer(dataArr)))
+divTop.innerHTML = misCartas
+
