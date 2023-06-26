@@ -27,7 +27,7 @@ export function silverPercentage(medalCount){
 export function silverAthletes(medalsArr){
   const silverNames = [];
   for (let i=0; i<medalsArr.length; i++){
-    if(medalsArr[i].Gold > 0){
+    if(medalsArr[i].Silver > 0){
       silverNames.push(medalsArr[i].name);
     }
   }
@@ -45,7 +45,7 @@ export function bronzePercentage(medalCount){
 export function bronzeAthletes(medalsArr){
   const bronzeNames = [];
   for (let i=0; i<medalsArr.length; i++){
-    if(medalsArr[i].Gold > 0){
+    if(medalsArr[i].Bronze > 0){
       bronzeNames.push(medalsArr[i].name);
     }
   }

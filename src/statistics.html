@@ -12,7 +12,7 @@
         <div class="logo">
           <h1><img id="logo2016" src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"></h1>
         </div>
-        <div class ="heading1" id="headingTop10"><h2>STATISTICS</h2></div>
+        <div class ="heading1" id="headingStats"><h2>STATISTICS</h2></div>
         <nav class="division">
           <a href="index.html">Athletes</a>
           <a href="statistics.html">Statistics</a>
@@ -22,27 +22,28 @@
     <div id="contenedorImg">
       <img id="imgOficial"  src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
     </div>
+    <div><h1 class="headingStats">Percentage of Athletes per Medal Type</h1></div>
     <div id="generalStats">
       <div id="pet3"><img src='https://www.nicepng.com/png/full/557-5573812_mascotas-rio-2016-mascota-de-los-juegos-olimpicos.png'> </div>
-      <div id="statisticsCont"><h1>Percentage of Athletes per Medal Type</h1>
-        <div id="goldMedal">
+      <div id="statisticsCont">
+        <div class = "cardsAth" id="goldMedal">
           <h2>Athletes that won Gold</h2>
-          <p id="gold%"></p>
-          <ul id="goldNames">
+          <p class="percentages" id="gold%"></p>
+          <ul class="athList fa-solid fa-star" id="goldNames">
           </ul>
-          <button class="expandButton">See more</button>
+          <button id="goldBtn" class="expandButton">See more</button>
         </div>
-        <div id="silverMedal">
+        <div class = "cardsAth" id="silverMedal">
           <h2>Athletes that won Silver</h2>
-          <p id="silver%"></p>
-          <ul id="silverNames"></ul>
-          <button class="expandButton">See more</button>
+          <p class="percentages" id="silver%"></p>
+          <ul class="athList" id="silverNames"></ul>
+          <button id="silverBtn" class="expandButton">See more</button>
         </div>
-        <div id="bronzeMedal">
+        <div class = "cardsAth" id="bronzeMedal">
           <h2>Athletes that won Bronze</h2>
-          <p id="bronze%"></p>
-          <ul id="bronzeNames"></ul>
-          <button class="expandButton">See more</button>
+          <p class="percentages" id="bronze%"></p>
+          <ul class="athList" id="bronzeNames"></ul>
+          <button id="bronzeBtn" class="expandButton">See more</button>
         </div>
       </div>
     </div>

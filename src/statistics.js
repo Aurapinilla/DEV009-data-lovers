@@ -40,6 +40,7 @@ const silverNamesList = document.getElementById("silverNames");
 const bronzeNames = bronzeAthletes(medalsArr);
 const bronzeNamesList = document.getElementById("bronzeNames");
 
+//La función crea las listas con los atletas por cada medalla
 function athLists () {
   goldNames.forEach((name) => {
     const listItem = document.createElement("li");
@@ -62,18 +63,25 @@ function athLists () {
 };
 athLists();
 
+//Activa los botones "see more" para que muestre la lista completa de los atletas
+const goldButton = document.getElementById("goldBtn");
+const silverButton = document.getElementById("silverBtn");
+const bronzeButton = document.getElementById("bronzeBtn");
 
-  //funcion if for each para que pase por la posicion [0] y si es >1 que traiga el nombre
-
-  console.log("03", medalsArr.length);
-
-  console.log("yas", goldAthletes(medalsArr));
-
-/*function nombresAth(){
-  for (let i=0; i<medalsArr.length; i++){
-    if (medalsArr[i].Gold > 0){
-      return medalsArr[i].name;
-    }
-  }
+function showGold() {
+  goldNamesList.style.maxHeight = "none";
+  goldButton.style.display = "none"; 
 }
-console.log("asap", nombresAth());*/
+goldButton.addEventListener("click", showGold);
+
+function showSilver() {
+  silverNamesList.style.maxHeight = "none";
+  silverButton.style.display = "none";
+}
+silverButton.addEventListener("click", showSilver);
+
+function showBronze() {
+  bronzeNamesList.style.maxHeight = "none";
+  bronzeButton.style.display = "none";
+}
+bronzeButton.addEventListener("click", showBronze);
