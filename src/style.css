@@ -170,6 +170,7 @@
     cursor: pointer;
 }
 .sortOptions {
+    position: absolute;
     width: 150px;
     background-color: #f4d4d3; 
     display: none;
@@ -235,14 +236,14 @@
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 #generalStats h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .percentages {
@@ -284,15 +285,16 @@
 
 .top10 {
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenedor */
+    justify-content: center; 
     margin-left: 200px;
   }
   
 .top10 button {
+    position: relative;
     display: flex;
     flex-direction: column;
     line-height: 4px;
-    align-items: center; /* Centra verticalmente el contenido del botón */
+    align-items: center;
     background-color: #081778d0;
     color: #FFDC0C;
     font-weight: bolder;
@@ -303,4 +305,40 @@
 
 .top10 :hover {
     cursor: pointer;
+}
+.top10 a {
+    text-decoration: none;
+}
+
+.homeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.homeButton .homeBtn {
+    border: none;
+    color: #081778d0;
+    background-color:#FFFEFF;
+}
+
+.homeButton .fa-house {
+    font-size: 29px;
+}
+.homeBtn :hover {
+    cursor: pointer;
+}
+#pet4 {
+    height: 350px;
+    width: auto;
+    display: flex;
+    padding-top: 170px;
+    flex: 0 0 auto;
+}
+#pet5 {
+    height: 350px;
+    width: auto;
+    display: flex;
+    padding-top: 170px;
+    flex: 0 0 auto;
 }
