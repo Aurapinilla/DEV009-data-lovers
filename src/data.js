@@ -87,7 +87,7 @@ export const sortData = {
     return newdata
   },
   //ordena los datos por país A - Z
-  sortbyCountryAtoZ:(data) => {
+  sortbyCountryAtoZ: (data) => {
     const newdata = data.slice().sort((a, b) => {
       const teamA = a.team.toLowerCase();
       const teamB = b.team.toLowerCase();
