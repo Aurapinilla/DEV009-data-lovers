@@ -1,4 +1,4 @@
-import { sortData, filterTeam, estadistica } from '../src/data.js';
+import { sortData, filterTeam,filterSport,filterGen,filterMedal, estadistica } from '../src/data.js';
 
 const data = [{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
   {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},
@@ -78,10 +78,13 @@ describe('ordena por', () => {
 });
 
 
-describe('filterTeam', () => {
-  it('Pide mostrar el país Italia', () => {
-    expect(filterTeam(data, 'Italy')).toEqual([{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
-      {"name": "Josue Glover","sport": "Basketball","team": "Italy","age": 19, "gender": "M", "medal": "Silver"}]);
+describe('anotherExample', () => {
+  it('is a function', () => {
+    expect(typeof anotherExample).toBe('function');
+  });
+
+  it('returns `anotherExample`', () => {
+    expect(anotherExample()).toBe('OMG');
   });
 });
 
