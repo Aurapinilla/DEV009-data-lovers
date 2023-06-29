@@ -12,42 +12,6 @@ export function filterSport(datos,deporte) {
   return g;
 }
 
-//FILTRO DEPORTE
-//Filtrar por Gimnasia
-export function filterGymnastics (datos) {
-  const g = datos.filter((obj) => {
-    return obj.sport === 'Gymnastics';})
-    return g;
-}
-
-//Filtrar por natación
-export function filterSwimming (datos) {
-  const s = datos.filter((obj) => {
-    return obj.sport === 'Swimming';})
-    return s;
-}
-
-//Filtrar por Basketball
-export function filterBasketball (datos) {
-  const b = datos.filter((obj) => {
-    return obj.sport === 'Basketball';})
-    return b;
-}
-
-//Filtrar por volleyball
-export function filterVolleyball (datos) {
-  const v = datos.filter((obj) => {
-    return obj.sport === 'Volleyball';})
-    return v;
-}
-
-//Filtrar por football
-export function filterFootball (datos) {
-  const f = datos.filter((obj) => {
-    return obj.sport === 'Football';})
-    return f;
-}
-
 //FILTRO GENERO
 export function filterGen (datos,genero) {
   const m = datos.filter((obj) => {
@@ -159,16 +123,14 @@ export const sortData = {
 // estadistica
 export function estadistica (medallas) {
   const suma = medallas.gold + medallas.silver + medallas.bronze
-  const gold =  (medallas.gold * 100) / suma
-  const silver = (medallas.silver * 100) / suma
-  const bronze = (medallas.bronze * 100) / suma
+  const gold =  (((medallas.gold * 100) / suma)).toFixed(2)
+  const silver = (((medallas.silver * 100) / suma)).toFixed(2)
+  const bronze = (((medallas.bronze * 100) / suma)).toFixed(2)
 
   const porcentaje = {
-    goldPorcent:gold,
-    silverPorcent:silver,
-    bronzePorcent:bronze,
+    goldPorcent:parseFloat(gold),
+    silverPorcent:parseFloat(silver),
+    bronzePorcent:parseFloat(bronze),
   }
   return porcentaje
 }
-
-
