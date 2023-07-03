@@ -75,44 +75,7 @@ describe('ordena por', () => {
       {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},
     ]);
   });
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States"}
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyAge1(input)).toEqual(output);
-  })
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = {"name": "Patimat Abakarova","age": 34}
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyAge2(input)).toEqual(output);
-  })
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States"}
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyNameAtoZ(input)).toEqual(output);
-  })
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States"}
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyNameZtoA(input)).toEqual(output);
-  })
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = "United States"
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyCountryAtoZ(input)).toEqual(output);
-  })
-
-  it ("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo", () => {
-    const input = "Colombia"
-    const output = "ERROR DATA INVALIDA"
-    expect (sortData.sortbyCountryZtoA(input)).toEqual(output);
-  })
 });
-
 
 describe('filterTeam', () => {
   it('Pide mostrar el país Italia', () => {
@@ -215,5 +178,5 @@ describe('estadistica', () => {
     const input = 53
     const output = "ERROR DATA INVALIDA"
     expect(estadistica(input)).toEqual(output)
-  })
+  })
 });

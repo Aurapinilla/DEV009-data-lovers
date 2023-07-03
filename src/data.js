@@ -13,10 +13,14 @@ export function filterTeam(datos, pais) {
 //FILTRO DEPORTE
 export function filterSport(datos, deporte) {
   if (Array.isArray(datos)) {
+    if (Array.isArray(datos)) {
     const g = datos.filter((obj) => {
-      return obj.sport === deporte;
-    })
-    return g;
+        return obj.sport === deporte;
+      })
+      return g;
+  } else {
+    return "ERROR DATA INVALIDA"
+  }
   } else {
     return "ERROR DATA INVALIDA"
   }
@@ -47,7 +51,6 @@ export function filterMedal(datos, medalla) {
     return "ERROR DATA INVALIDA"
   }
 }
-
 //ORDEN
 export const sortData = {
   //ordena los atletas por edad: Mayor a Menor
@@ -190,6 +193,6 @@ export function estadistica(medallas) {
     return porcentaje
   }
   else {
-    return "ERROR DATA INVALIDA"
-  }
+    return "ERROR DATA INVALIDA"
+  }
 }
