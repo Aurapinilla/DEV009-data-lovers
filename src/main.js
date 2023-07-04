@@ -67,16 +67,16 @@ document.getElementById("teamZtoA").addEventListener("click", () => {
   cardsContainer.innerHTML = generateCards(sortData.sortbyCountryZtoA(dataArr));
 }),
 
-  //FILTRAR TEAM
-  //Filtrar por Team/Italy
-  /*function fteam(team, pais) {
-    const funcData = filterTeam(team, pais);
-    const createHTML = generateCards(funcData);
+//FILTRAR TEAM
+//Filtrar por Team/Italy
+/*function fteam(team, pais) {
+  const funcData = filterTeam(team, pais);
+  const createHTML = generateCards(funcData);
     return createHTML;
   }*/
-  document.getElementById('Italy').addEventListener('click', () =>
-    cardsContainer.innerHTML = fteam(dataArr, 'Italy')
-  );
+document.getElementById('Italy').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'Italy')
+);
 document.getElementById('United States').addEventListener('click', () =>
   cardsContainer.innerHTML = fteam(dataArr, 'United States')
 );

@@ -6,23 +6,19 @@ export function filterTeam(datos, pais) {
     })
     return i
   } else {
-    return "ERROR DATA INVALIDA"
+    return "ERROR DATA INVALIDA";
   }
 }
 
 //FILTRO DEPORTE
 export function filterSport(datos, deporte) {
   if (Array.isArray(datos)) {
-    if (Array.isArray(datos)) {
     const g = datos.filter((obj) => {
-        return obj.sport === deporte;
-      })
-      return g;
+      return obj.sport === deporte;
+    })
+    return g;
   } else {
-    return "ERROR DATA INVALIDA"
-  }
-  } else {
-    return "ERROR DATA INVALIDA"
+    return "ERROR DATA INVALIDA";
   }
 }
 
@@ -35,7 +31,7 @@ export function filterGen(datos, genero) {
     return m
   }
   else {
-    return "ERROR DATA INVALIDA"
+    return "ERROR DATA INVALIDA";
   }
 }
 
@@ -48,7 +44,7 @@ export function filterMedal(datos, medalla) {
     return g
   }
   else {
-    return "ERROR DATA INVALIDA"
+    return "ERROR DATA INVALIDA";
   }
 }
 //ORDEN
@@ -68,7 +64,7 @@ export const sortData = {
       return newdata;
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   },
   //ordena los atletas por edad: Menor a Mayor
@@ -87,7 +83,7 @@ export const sortData = {
       return newdata;
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   },
   //ordena los atletas por nombre A - Z
@@ -108,7 +104,7 @@ export const sortData = {
       return newdata
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   },
   //ordena los atletas por nombre Z - A
@@ -129,7 +125,7 @@ export const sortData = {
       return newdata
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   },
   //ordena los datos por país A - Z
@@ -150,7 +146,7 @@ export const sortData = {
       return newdata
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   },
   //ordena los datos por país Z - A
@@ -171,7 +167,7 @@ export const sortData = {
       return newdata
     }
     else {
-      return "ERROR DATA INVALIDA"
+      return "ERROR DATA INVALIDA";
     }
   }
 };
@@ -191,8 +187,7 @@ export function estadistica(medallas) {
       bronzePorcent: parseFloat(bronze),
     }
     return porcentaje
+  } else {
+    return "ERROR DATA INVALIDA";
   }
-  else {
-    return "ERROR DATA INVALIDA"
-  }
 }
