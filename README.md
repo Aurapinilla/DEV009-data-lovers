@@ -287,49 +287,46 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 * El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 
-## 5. Criterios de aceptación mínimos del proyecto
+5. Criterios de aceptación mínimos del proyecto
 
-Los criterios para considerar que has completado este proyecto son:
+Definición del Producto
 
-### Definición del producto
+Bienvenidos a nuestro emocionante proyecto sobre los Juegos Olímpicos de Río 2016. Durante este evento histórico, atletas de todo el mundo se reunieron en Río de Janeiro para competir en una variedad de deportes y demostrar su habilidad, dedicación y espíritu deportivo. 
+Nuestro proyecto se sumerge en el vibrante mundo de los Juegos Olímpicos de Río 2016, mostrando la información de los distintos Atletas participantes, También se podrá visualizar un Top 10 de los Atletas con mayor cantidad de medallas, así como una estadística del porcentaje de medallas divididas por oro,plata y bronce. 
+ Prepárense para sumergirse en la magia de Río 2016 y experimentar la grandeza deportiva en su máxima expresión. ¡Bienvenidos a nuestro proyecto sobre los Juegos Olímpicos de Río 2016!
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Historias de Usuario
+Las historias de usuario son una herramienta fundamental en el desarrollo de software que nos permite capturar y comunicar los requisitos funcionales desde la perspectiva del usuario. Cada historia de usuario representa una funcionalidad específica que agrega valor al producto final. Durante esta presentación, compartiremos una serie de historias de usuario que hemos identificado como prioridades para nuestro proyecto. Cada historia describirá quién es el usuario, qué necesita lograr y por qué es importante. A medida que avancemos, invitamos a todos a participar, hacer preguntas y proporcionar comentarios constructivos. A continuación las historias de usuario consideradas para este proyecto:
+Link Doc https://docs.google.com/spreadsheets/d/1EMhIyuK8nJcyPpKE-3Yu7cQbZ3rqzFqd-JUncEco9Ao/edit#gid=0
+<img width="1110" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/606b4273-f973-433d-acc7-7565c5c41964">
 
-### Historias de usuario
- Las historias de usuario son una herramienta fundamental en el desarrollo de software que nos permite capturar y comunicar los requisitos funcionales desde la perspectiva del usuario. Cada historia de usuario representa una funcionalidad específica que agrega valor al producto final. Durante esta presentación, compartiremos una serie de historias de usuario que hemos identificado como prioridades para nuestro proyecto. Cada historia describirá quién es el usuario, qué necesita lograr y por qué es importante. A medida que avancemos, invitamos a todos a participar, hacer preguntas y proporcionar comentarios constructivos. 
-A continuacion las historias de usuario consideradas para este proyecto
-Link https://docs.google.com/spreadsheets/d/1EMhIyuK8nJcyPpKE-3Yu7cQbZ3rqzFqd-JUncEco9Ao/edit#gid=0
-<img width="1106" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/8b921b81-ade0-4140-b5cb-3907a031a0fa">
-### Diseño de la Interfaz de Usuario
+Proceso de diseño y elaboración de prototipos:
+Basándonos en la información anterior relacionada con las historias de usuario comenzamos con la elaboración y validación de los prototipos de baja y alta fidelidad. 
 
-#### Prototipo de baja fidelidad
+Prototipo de baja fidelidad:
+En este sentido el prototipo de baja fidelidad simplemente se enfocó en elaborar una maqueta base con la idea principal de cómo se iba a mostrar la información. También en este punto definimos el tipo de filtros que íbamos a utilizar según más fuera conveniente y relevante para los usuarios.
+Prototipo Baja Fidelidad
+<img width="706" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/d5369235-ad32-45f4-8d91-ed99195d23ac">
+<img width="873" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/274b13c3-007e-46df-9caf-ef736a876301">
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+Estos prototipos los validamos con los coaches y comentarios de las compañeras durante los Sprints. Una vez teníamos el esquema base, comenzamos a elaborar los siguientes prototipos. 
 
-#### Prototipo de alta fidelidad
+Prototipo Fidelidad Media
+Prototipo Fidelidad Media. Para el siguiente prototipo de fidelidad media comenzamos a definir un poco más en términos de diseño, los colores que queríamos usar y más puntualmente la manera en la que queríamos mostrar la información. Este prototipo aún no era dinámico por lo que solo validamos cuestiones de diseño.
+<img width="482" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/3c51b556-2f96-42fb-949e-131fdc6f6fb7">
+<img width="482" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/59e14f10-6af4-414f-ac98-f83c117cacb4">
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+Prototipo Fidelidad Alta
+Finalmente en la medida en la que fuimos realizando el código y testeando la usabilidad del producto con personas en nuestra casa, nos comenzamos a encontrar con obstáculos principalmente en cuestión del diseño que no creíamos que íbamos a lograr, por ejemplo poder agregar la imagen del atleta para todos los atletas de la base de datos. Eso nos llevó a modificar el diseño y ajustarlo a algo que pudiéramos lograr con mayor facilidad.
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+En el proceso también logramos identificar errores de usabilidad relacionados con el filtro ya que inicialmente estaba muy extenso y no era agradable para el usuario de ver, también problemas relacionados con la barra de búsqueda que al borrar el texto desaparecían las cartillas de los atletas. En cuestiones de diseño también tuvimos que hacer ajustes para la versión móvil para que la información no se viera saturada y los filtros y demás pudieran funcionar igualmente de la forma esperada.
 
-#### Testeos de usabilidad
+A continuación se encuentran los links de los prototipos dinámicos de alta fidelidad: 
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Prototipo de Alta Fidelidad - Desktop
+<img width="286" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/8b3c7a15-71a1-4310-a2fd-80a2c4e71965">
+Prototipo Alta Fidelidad - Móvil
+<img width="584" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/bda6026a-8710-4edb-b3c2-8f1813aee5f8">
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
