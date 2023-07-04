@@ -327,8 +327,9 @@ Finalmente en la medida en la que fuimos realizando el código y testeando la us
 En el proceso también logramos identificar errores de usabilidad relacionados con el filtro ya que inicialmente estaba muy extenso y no era agradable para el usuario de ver, también problemas relacionados con la barra de búsqueda que al borrar el texto desaparecían las cartillas de los atletas. En cuestiones de diseño también tuvimos que hacer ajustes para la versión móvil para que la información no se viera saturada y los filtros y demás pudieran funcionar igualmente de la forma esperada.
 
 A continuación se encuentran los links de los prototipos dinámicos de alta fidelidad: 
+[Prototipo de Alta Fidelidad - Desktop](https://www.figma.com/proto/obiJ4v9BvKskIhGsOzeexv/Prototipo-Funcional-Desktop?type=design&node-id=1-26&t=ZP26EiMdJ619oTiY-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A26&mode=design)
+[Prototipo de Alta Fidelidad - Móvil](https://www.figma.com/proto/1vckJViAUSANParLwNT6FT/Prototipo-Alta-Fidelidad-M%C3%B3vil?type=design&t=WQZiovi1drEQafzw-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A25&node-id=13-25&mode=design)
 
-Prototipo de Alta Fidelidad - Desktop
 
 <img width="286" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/8b3c7a15-71a1-4310-a2fd-80a2c4e71965">
 
