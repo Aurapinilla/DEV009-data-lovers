@@ -305,15 +305,20 @@ Basándonos en la información anterior relacionada con las historias de usuario
 
 Prototipo de baja fidelidad:
 En este sentido el prototipo de baja fidelidad simplemente se enfocó en elaborar una maqueta base con la idea principal de cómo se iba a mostrar la información. También en este punto definimos el tipo de filtros que íbamos a utilizar según más fuera conveniente y relevante para los usuarios.
+
 Prototipo Baja Fidelidad
+
 <img width="706" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/d5369235-ad32-45f4-8d91-ed99195d23ac">
+
 <img width="873" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/274b13c3-007e-46df-9caf-ef736a876301">
 
 Estos prototipos los validamos con los coaches y comentarios de las compañeras durante los Sprints. Una vez teníamos el esquema base, comenzamos a elaborar los siguientes prototipos. 
 
 Prototipo Fidelidad Media
 Prototipo Fidelidad Media. Para el siguiente prototipo de fidelidad media comenzamos a definir un poco más en términos de diseño, los colores que queríamos usar y más puntualmente la manera en la que queríamos mostrar la información. Este prototipo aún no era dinámico por lo que solo validamos cuestiones de diseño.
+
 <img width="482" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/3c51b556-2f96-42fb-949e-131fdc6f6fb7">
+
 <img width="482" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/59e14f10-6af4-414f-ac98-f83c117cacb4">
 
 Prototipo Fidelidad Alta
@@ -324,8 +329,11 @@ En el proceso también logramos identificar errores de usabilidad relacionados c
 A continuación se encuentran los links de los prototipos dinámicos de alta fidelidad: 
 
 Prototipo de Alta Fidelidad - Desktop
+
 <img width="286" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/8b3c7a15-71a1-4310-a2fd-80a2c4e71965">
+
 Prototipo Alta Fidelidad - Móvil
+
 <img width="584" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/bda6026a-8710-4edb-b3c2-8f1813aee5f8">
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
