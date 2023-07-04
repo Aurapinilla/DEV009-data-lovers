@@ -298,18 +298,10 @@ contándonos cómo fue tu proceso de diseño y cómo crees que el producto resue
 el problema (o problemas) que tiene tu usuario.
 
 ### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
+ Las historias de usuario son una herramienta fundamental en el desarrollo de software que nos permite capturar y comunicar los requisitos funcionales desde la perspectiva del usuario. Cada historia de usuario representa una funcionalidad específica que agrega valor al producto final. Durante esta presentación, compartiremos una serie de historias de usuario que hemos identificado como prioridades para nuestro proyecto. Cada historia describirá quién es el usuario, qué necesita lograr y por qué es importante. A medida que avancemos, invitamos a todos a participar, hacer preguntas y proporcionar comentarios constructivos. 
+A continuacion las historias de usuario consideradas para este proyecto
+Link https://docs.google.com/spreadsheets/d/1EMhIyuK8nJcyPpKE-3Yu7cQbZ3rqzFqd-JUncEco9Ao/edit#gid=0
+<img width="1106" alt="image" src="https://github.com/NahomiVRojas/DEV009-data-lovers/assets/127104999/8b921b81-ade0-4140-b5cb-3907a031a0fa">
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
