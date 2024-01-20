@@ -1,142 +1,160 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers-DL3</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/d73e2e89e3.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d73e2e89e3.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header> 
-    <div class="contenedor"> 
-      <div class="iconofiltro">
-      <label id="tresboton"  for="btnFiltro">☰</label>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers-DL3</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/d73e2e89e3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d73e2e89e3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="filter-icon">
+        <label id="tresboton" for="filter-button">☰</label>
       </div>
-        <div class="logo">
-          <h1> <img id="logo2016" src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"> </h1>
-        </div>
-        <nav class="division">
-          <a id="Athletes">Athletes </a>
-          <a id="Statistics">Statistics </a>
-        </nav>
+      <div class="logo">
+        <h1> <img id="logo2016"
+            src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"> </h1>
       </div>
-    </header>
-      <input type="checkbox" id="btnFiltro">
-    <div class="contenedorFiltros">
-      <div class="contenedorFiltros2">
-        <nav>
-          <a>Team</a>
-          <ul id="teams">
-            <li><a id="Italy">Italy</a></li>
-            <li><a id="United States">United States</a></li>
-            <li><a id="Russia">Russia</a></li>
-            <li><a id="France">France</a></li>
-            <li><a id="Colombia">Colombia</a></li>
-          </ul>
-          <a>Sport</a>
-          <ul id="sport">
-            <li><a id="gymnastics">Gymnastics</a></li>
-            <li><a id="swimming">Swimming</a></li>
-            <li><a id="basketball">Basketball</a></li>
-            <li><a id="volleyball">Volleyball</a></li>
-            <li><a id="football">Football</a></li>
-          </ul>
-          <a>Gender</a>
-          <ul id="gender">
-            <li><a id="m">Masculine</a></li>
-            <li><a id="f">Feminine</a></li>
-          </ul>
-          <a>Medal</a>
-          <ul id="medal">
-            <li><a id="oro">Gold</a></li>
-            <li><a id="plata">Silver</a></li>
-            <li><a id="bronce">Bronze</a></li>
-          </ul>
-        </nav>
-        <label for="btnFiltro"> ✖️ </label>
-      </div>
+      <nav class="navigation-page">
+        <a id="Athletes">Athletes </a>
+        <a id="Statistics">Statistics </a>
+      </nav>
     </div>
-    <div id="contenedorImg">
-      <img id="imgOficial"  src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
+  </header>
+
+  <input type="checkbox" id="filter-button">
+  <div class="filter-container">
+    <div class="filter-categories">
+      <aside>
+        <a>Team</a>
+        <ul id="teams" class="filter-selection">
+          <li><a id="Italy">Italy</a></li>
+          <li><a id="United States">United States</a></li>
+          <li><a id="Russia">Russia</a></li>
+          <li><a id="France">France</a></li>
+          <li><a id="Colombia">Colombia</a></li>
+        </ul>
+        <a>Sport</a>
+        <ul id="sport" class="filter-selection">
+          <li><a id="gymnastics">Gymnastics</a></li>
+          <li><a id="swimming">Swimming</a></li>
+          <li><a id="basketball">Basketball</a></li>
+          <li><a id="volleyball">Volleyball</a></li>
+          <li><a id="football">Football</a></li>
+        </ul>
+        <a>Gender</a>
+        <ul id="gender" class="filter-selection">
+          <li><a id="m">Masculine</a></li>
+          <li><a id="f">Feminine</a></li>
+        </ul>
+        <a>Medal</a>
+        <ul id="medal" class="filter-selection">
+          <li><a id="oro">Gold</a></li>
+          <li><a id="plata">Silver</a></li>
+          <li><a id="bronce">Bronze</a></li>
+        </ul>
+      </aside>
+      <label for="filter-button"> ✖️ </label>
     </div>
+  </div>
+
+  <div id="img-container">
+    <img id="imgOficial" src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
+  </div>
+
   <!--PAGINA ATHLETES-->
-  <div id="paginaAthletes" class="page active">
-    <div id="barraBuscador"> 
-      <input id="barra" type="text">
+  <section id="athletes-page" class="page active">
+    <div class="search-container">
+      <input id="search-bar" type="text">
       <button id="clear">Clear</button>
     </div>
     <br>
-      <div id="boxSortBy">
-        <div class ="sortBy">
-         <button class="order"> SortBy </button>
-            <div class="sortOptions">
-            <a  id="oldestToYoungest"> Age(Oldest to Youngest)</a>
-             <a  id="youngestToOldest"> Age(Youngest to Oldest)</a>
-             <a  id="athleteAtoZ"> Name(A to Z)</a>
-            <a  id="athleteZtoA"> Name(Z to A)</a>
-            <a  id="teamAtoZ"> Team(A to Z)</a>
-            <a  id="teamZtoA"> Team(Z to A)</a>
-            </div> 
-        </div>   
+    <div id="boxSortBy">
+      <div class="sortBy">
+        <button class="order"> SortBy </button>
+        <div class="sortOptions">
+          <a id="oldestToYoungest"> Age(Oldest to Youngest)</a>
+          <a id="youngestToOldest"> Age(Youngest to Oldest)</a>
+          <a id="athleteAtoZ"> Name(A to Z)</a>
+          <a id="athleteZtoA"> Name(Z to A)</a>
+          <a id="teamAtoZ"> Team(A to Z)</a>
+          <a id="teamZtoA"> Team(Z to A)</a>
+        </div>
       </div>
-      <div class="top10">
-        <a>
-          <button id="botontop"><i class="fa-solid fa-star"></i><br>Top 10</button>
-        </a>
-      </div>
-      <br>
-      <br>
-    <div id="general"> 
-      <div id="pet1"><img id="petTom" src="https://img.olympicchannel.com/images/image/private//f_auto/primary/fcw7olxhvuieykn0xyej"> </div>
-      <div id="cartillaContenedor"></div>
-      <div id="pet2"><img id="petgreen"  src="https://i.pinimg.com/originals/2f/40/db/2f40db15613dd4e8ae7d2ea7778804f9.png"> </div>
     </div>
+    <div class="top10">
+      <a>
+        <button id="top10-icon"><i class="fa-solid fa-star"></i><br>Top 10</button>
+      </a>
+    </div>
+    <br>
+    <br>
+    <main>
+      <div id="general">
+        <div id="pet1"><img id="petTom"
+            src="https://img.olympicchannel.com/images/image/private//f_auto/primary/fcw7olxhvuieykn0xyej"> </div>
+        <div id="athletes-info"></div>
+        <div id="pet2"><img id="petgreen"
+            src="https://i.pinimg.com/originals/2f/40/db/2f40db15613dd4e8ae7d2ea7778804f9.png"> </div>
+      </div>
+    </main>
+
     <script src="main.js" type="module"></script>
-  </div>  
-   <!--PAGINA TOP10-->
-   <div id="paginaTop" class="page">
+  </section>
+
+  <!--PAGINA TOP10-->
+  <section id="top-athletes-page" class="page">
     <div class="homeButton">
       <a>
-        <button id="casita" class="homeBtn"><i class="fa-solid fa-house"></i></button>
+        <button id="home-icon" class="homeBtn"><i class="fa-solid fa-house"></i></button>
       </a>
     </div>
     <div id="general2">
-      <div id="pet3"><img id="mascotasJuntas" src="https://www.nicepng.com/png/full/557-5573812_mascotas-rio-2016-mascota-de-los-juegos-olimpicos.png"> </div>
+      <div id="pet3"><img id="pets-together"
+          src="https://www.nicepng.com/png/full/557-5573812_mascotas-rio-2016-mascota-de-los-juegos-olimpicos.png">
+      </div>
       <div id="topContainer"></div>
     </div>
     <script src="main.js" type="module"></script>
-   </div>
-    <!--PAGINA STATISTICS-->
-    <div id="paginaStatistics" class="page">
-      <div class="homeButton">
-        <a>
-          <button id="casita2"  class="homeBtn"><i class="fa-solid fa-house"></i></button>
-        </a>
-      </div>
-      <div><h1 class="headingStats">PERCENTAGE OF TYPE OF MEDALS WON</h1></div><br>
-      <div id="generalStats">
-        <div id="pet4"><img src="https://i.pinimg.com/564x/7a/b9/6f/7ab96f0bc75d2181d048d8a46f458ec7.jpg"> </div>
-        <div id="statisticsCont">
-          <div class = "cardsAth" id="goldMedal">
-            <img id="imgoro" src="https://i.pinimg.com/564x/e7/66/81/e76681d8256345f7ac12f37f19dc71f4.jpg">
-            <h2>% Golden Medals</h2>
-            <p class="percentages" id="gold%"></p>
-          </div>
-          <div class = "cardsAth" id="silverMedal">
-            <img id="imgplata" src="https://i.pinimg.com/564x/8b/32/32/8b32323f5ce8e8cb6b1b6fb50bbdd1c4.jpg">
-            <h2>% Silver Medals </h2>
-            <p class="percentages" id="silver%"></p>
-          </div>
-          <div class = "cardsAth" id="bronzeMedal">
-            <img id="imgbronce" src="https://i.pinimg.com/564x/4e/40/e1/4e40e13c34e69143207f44f540012e6b.jpg">
-            <h2>%Bronze Medals</h2>
-            <p class="percentages" id="bronze%"></p>
-          </div>
-        </div>
-        <div id = "pet5"><img src="https://i.pinimg.com/564x/70/db/f6/70dbf6bcbcda8bdcfb32e129044ede82.jpg"></div>
-      </div>
-      <script src="main.js" type="module"></script>
+  </section>
+
+  <!--PAGINA STATISTICS-->
+  <section id="statistics-page" class="page">
+    <div class="homeButton">
+      <a>
+        <button id="home-icon2" class="homeBtn"><i class="fa-solid fa-house"></i></button>
+      </a>
     </div>
-  </body>
+    <div>
+      <h1 class="headingStats">PERCENTAGE OF TYPE OF MEDALS WON</h1>
+    </div><br>
+    <div id="generalStats">
+      <div id="pet4"><img src="https://i.pinimg.com/564x/7a/b9/6f/7ab96f0bc75d2181d048d8a46f458ec7.jpg"> </div>
+      <div id="statisticsCont">
+        <div class="cardsAth" id="goldMedal">
+          <img id="imgoro" src="https://i.pinimg.com/564x/e7/66/81/e76681d8256345f7ac12f37f19dc71f4.jpg">
+          <h2>% Golden Medals</h2>
+          <p class="percentages" id="gold%"></p>
+        </div>
+        <div class="cardsAth" id="silverMedal">
+          <img id="imgplata" src="https://i.pinimg.com/564x/8b/32/32/8b32323f5ce8e8cb6b1b6fb50bbdd1c4.jpg">
+          <h2>% Silver Medals </h2>
+          <p class="percentages" id="silver%"></p>
+        </div>
+        <div class="cardsAth" id="bronzeMedal">
+          <img id="imgbronce" src="https://i.pinimg.com/564x/4e/40/e1/4e40e13c34e69143207f44f540012e6b.jpg">
+          <h2>%Bronze Medals</h2>
+          <p class="percentages" id="bronze%"></p>
+        </div>
+      </div>
+      <div id="pet5"><img src="https://i.pinimg.com/564x/70/db/f6/70dbf6bcbcda8bdcfb32e129044ede82.jpg"></div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </section>
+</body>
+
 </html>

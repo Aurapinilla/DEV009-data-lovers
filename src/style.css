@@ -6,16 +6,16 @@
     display: none; 
 }
 .page.active {
-    display: block; 
+    display: block;
 }
-.contenedor {
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #EBEBEB;
     height: 85px;
 }
-.contenedor .heading1 {
+.container .heading1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,33 +26,33 @@
     line-height: 140px;
     height: 140px;
 }
-.division{
+.navigation-page {
     display: flex;
     align-items: center;
     margin-left: auto ;
 }
-.division a{
+.navigation-page a {
     text-decoration: none;
     color: black;
     cursor: pointer;
     font-size: larger;
     padding: 50px;
 }
-.division a:hover {
+.navigation-page a:hover {
     display: flex;
     align-items: center;
     background-color: #D3D3D3;
     height: 10px;
 }
-.contenedor .iconofiltro label {
+.container .filter-icon label {
     font-size: 30px;
     padding: 20px;
     cursor: pointer;
 }
-#btnFiltro {
+#filter-button {
     display: none;
 }
-.contenedorFiltros {
+.filter-container {
     display: flex;
     align-items: start;
     position: absolute;
@@ -63,11 +63,11 @@
     visibility: hidden;
     z-index: 99999
 }
-#btnFiltro:checked ~ .contenedorFiltros{
+#filter-button:checked ~ .filter-container {
     opacity: 1;
     visibility: visible;
 }
-.contenedorFiltros .contenedorFiltros2 {
+.filter-container .filter-categories {
     display: flex;
     align-items: start;
     width: 100%;
@@ -76,18 +76,18 @@
     height: 1500px;
     position: relative;
 }
-.contenedorFiltros .contenedorFiltros2 nav a{
+.filter-container .filter-categories aside a{
     display: block;
     text-decoration: none;
     padding: 20px;
     color: white;
     border-left: 5px solid transparent;
 }
-.contenedorFiltros .contenedorFiltros2 nav a:hover{
+.filter-container .filter-categories aside a:hover{
     background: #2d2d2d;
     border-left: 5px solid #dddada
 }
-.contenedorFiltros .contenedorFiltros2 label{
+.filter-container .filter-categories label{
     position: absolute;
     right: 5px;
     top: 10px;
@@ -103,7 +103,7 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-#cartillaContenedor {
+#athletes-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
@@ -141,7 +141,7 @@
     width: auto;
     padding-top: 200px;
 }
-#mascotasJuntas{
+#pets-together{
     margin-top: 50px;
     width: 350px;
     height: auto;
@@ -151,30 +151,15 @@
     width: 450px;
     height: auto;
 }
-#teams {
+
+.filter-selection{
     list-style: none;
 }
-#teams a{
+
+.filter-selection a{
     cursor: pointer;
 }
-#sport {
-    list-style: none;
-}
-#sport a{
-    cursor: pointer;
-}
-#gender {
-    list-style: none;
-}
-#gender a{
-    cursor: pointer;
-}
-#medal {
-    list-style: none;
-}
-#medal a{
-    cursor: pointer;
-}
+
 .cartilla {
     border: 2px solid #c4d2e3;
     padding: 15px;
@@ -186,11 +171,11 @@
     width: 500px;
     margin-top: 25px;
 }
-#contenedorImg {
+#img-container {
     display: flex;
     justify-content: center;
 }
-#barraBuscador {
+.search-container {
     display: flex;
     justify-content: center;
 }
@@ -246,7 +231,7 @@
     margin-right: 50px;
     margin-left: 10px;
 }
-#barra {
+#search-bar {
     width: 200px;
     padding: 8px;
     border: 1.5px solid #ccc;
@@ -388,10 +373,10 @@
 
 @media (max-width: 1290px) {
     /*Contenedor superior*/
-    .contenedor{
+    .container{
         height: 105px;
     }
-    .contenedor .iconofiltro label {
+    .container .filter-icon label {
         font-size: 70px;
         padding: 20px;
         cursor: pointer;
@@ -400,19 +385,19 @@
         height: 250px;
         width: auto;
     }
-    .division a{
+    .navigation-page a{
         font-size: xx-large;
         padding: 50px;
     }
-    .contenedorFiltros .contenedorFiltros2 {
+    .filter-container .filter-categories {
         max-width: 400px;
         height: 2500px;
     }  
-    .contenedorFiltros .contenedorFiltros2 nav a{
+    .filter-container .filter-categories aside a{
         padding: 40px;
         font-size: xx-large;
     }
-    .contenedorFiltros .contenedorFiltros2 label{
+    .filter-container .filter-categories label{
         font-size: 80px;
     }   
     #imgOficial{
@@ -420,7 +405,7 @@
         width: auto;
     }
     /*Pagina Atletas*/
-    #barra{
+    #search-bar {
         width: 450px;
         height: 50px;
         font-size: x-large;
@@ -452,7 +437,7 @@
     #pet2{
         display: none;
     }
-    #cartillaContenedor{
+    #athletes-info{
         font-size: x-large;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;

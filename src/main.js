@@ -4,12 +4,12 @@ import data from './data/athletes/athletes.js';
 //llamar a los datos de Athletes
 const dataArr = (data.athletes)
 //Barra de busqueda
-const barra = document.getElementById('barra')
+const searchBar = document.getElementById('search-bar')
 //Boton buscar
 const clear = document.getElementById('clear')
 
 //Lo que se busque en la barra me muestre el resultado
-barra.addEventListener('input', (e) => {
+searchBar.addEventListener('input', (e) => {
   const searchTerm = e.target.value.toLowerCase();
   const filteredData = dataArr.filter(atleta => atleta.name.toLowerCase().includes(searchTerm) ||
     atleta.team.toLowerCase().includes(searchTerm) ||
@@ -21,7 +21,7 @@ barra.addEventListener('input', (e) => {
 
 // Limpiar input text
 clear.addEventListener('click', () => {
-  return barra.value = ""
+  return searchBar.value = ""
 })
 
 // Extrar los datos
@@ -36,7 +36,7 @@ function generateCards(cards) {
 }
 
 //Se agregan las cartillas con la información
-const cardsContainer = document.getElementById('cartillaContenedor');
+const cardsContainer = document.getElementById('athletes-info');
 cardsContainer.innerHTML = generateCards(dataArr);
 
 //FILTRAR TEAM
@@ -217,20 +217,20 @@ function showPage(pageId) {
   page.classList.add('active');
 }
 
-document.getElementById("botontop").addEventListener("click", function () {
-  showPage('paginaTop');
+document.getElementById("top10-icon").addEventListener("click", function () {
+  showPage('top-athletes-page');
 });
-document.getElementById("casita").addEventListener("click", function () {
-  showPage('paginaAthletes');
+document.getElementById("home-icon").addEventListener("click", function () {
+  showPage('athletes-page');
 });
 document.getElementById("Statistics").addEventListener("click", function () {
-  showPage('paginaStatistics');
+  showPage('statistics-page');
 });
 document.getElementById("Athletes").addEventListener("click", function () {
-  showPage('paginaAthletes');
+  showPage('athletes-page');
 });
-document.getElementById("casita2").addEventListener("click", function () {
-  showPage('paginaAthletes');
+document.getElementById("home-icon2").addEventListener("click", function () {
+  showPage('athletes-page');
 });
 
 //ESTADISTICA
