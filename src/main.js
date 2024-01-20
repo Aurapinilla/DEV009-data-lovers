@@ -8,6 +8,17 @@ const searchBar = document.getElementById('search-bar')
 //Boton buscar
 const clear = document.getElementById('clear')
 
+// Extraer los datos
+function generateCards(cards) {
+  const cardsHTML = cards.map((object) => {
+    const propiedadesHTML = Object.entries(object).map(([clave, valor]) => {
+      return `<p><strong>${clave}:</strong> ${valor}</p>`;
+    }).join('');
+    return `<div class="cartilla">${propiedadesHTML}</div>`;
+  });
+  return cardsHTML.join('');
+}
+
 //Lo que se busque en la barra me muestre el resultado
 searchBar.addEventListener('input', (e) => {
   const searchTerm = e.target.value.toLowerCase();
@@ -21,19 +32,10 @@ searchBar.addEventListener('input', (e) => {
 
 // Limpiar input text
 clear.addEventListener('click', () => {
-  return searchBar.value = ""
+  const createHTML = generateCards(dataArr);
+  cardsContainer.innerHTML = createHTML;
+  searchBar.value = "";
 })
-
-// Extrar los datos
-function generateCards(cards) {
-  const cardsHTML = cards.map((object) => {
-    const propiedadesHTML = Object.entries(object).map(([clave, valor]) => {
-      return `<p><strong>${clave}:</strong> ${valor}</p>`;
-    }).join('');
-    return `<div class="cartilla">${propiedadesHTML}</div>`;
-  });
-  return cardsHTML.join('');
-}
 
 //Se agregan las cartillas con la información
 const cardsContainer = document.getElementById('athletes-info');
@@ -65,15 +67,9 @@ document.getElementById("teamAtoZ").addEventListener("click", () => {
 });
 document.getElementById("teamZtoA").addEventListener("click", () => {
   cardsContainer.innerHTML = generateCards(sortData.sortbyCountryZtoA(dataArr));
-}),
+});
 
 //FILTRAR TEAM
-//Filtrar por Team/Italy
-/*function fteam(team, pais) {
-  const funcData = filterTeam(team, pais);
-  const createHTML = generateCards(funcData);
-  return createHTML;
-}*/
 document.getElementById('Italy').addEventListener('click', () =>
   cardsContainer.innerHTML = fteam(dataArr, 'Italy')
 );

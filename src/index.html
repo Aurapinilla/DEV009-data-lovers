@@ -15,14 +15,13 @@
       <div class="filter-icon">
         <label id="tresboton" for="filter-button">☰</label>
       </div>
-      <div class="logo">
-        <h1> <img id="logo2016"
-            src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"> </h1>
-      </div>
       <nav class="navigation-page">
         <a id="Athletes">Athletes </a>
         <a id="Statistics">Statistics </a>
       </nav>
+      <div id="img-container">
+        <img id="imgOficial" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Rio_2016_logo.svg/1200px-Rio_2016_logo.svg.png">
+      </div>
     </div>
   </header>
 
@@ -30,6 +29,7 @@
   <div class="filter-container">
     <div class="filter-categories">
       <aside>
+        <label for="filter-button"> ✖️ </label>
         <a>Team</a>
         <ul id="teams" class="filter-selection">
           <li><a id="Italy">Italy</a></li>
@@ -58,48 +58,48 @@
           <li><a id="bronce">Bronze</a></li>
         </ul>
       </aside>
-      <label for="filter-button"> ✖️ </label>
     </div>
-  </div>
-
-  <div id="img-container">
-    <img id="imgOficial" src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
   </div>
 
   <!--PAGINA ATHLETES-->
   <section id="athletes-page" class="page active">
+    <h1 class="athletes-title">ATHLETES</h1>
     <div class="search-container">
       <input id="search-bar" type="text">
       <button id="clear">Clear</button>
     </div>
-    <br>
-    <div id="boxSortBy">
-      <div class="sortBy">
-        <button class="order"> SortBy </button>
-        <div class="sortOptions">
-          <a id="oldestToYoungest"> Age(Oldest to Youngest)</a>
-          <a id="youngestToOldest"> Age(Youngest to Oldest)</a>
-          <a id="athleteAtoZ"> Name(A to Z)</a>
-          <a id="athleteZtoA"> Name(Z to A)</a>
-          <a id="teamAtoZ"> Team(A to Z)</a>
-          <a id="teamZtoA"> Team(Z to A)</a>
+
+    <section class = "sort-top10">
+      <div id="boxSortBy" class="toggleOptions">
+        <div class="sortBy">
+          <button class="order"> SortBy </button>
+          <div class="sortOptions">
+            <a id="oldestToYoungest"> Age(Oldest to Youngest)</a>
+            <a id="youngestToOldest"> Age(Youngest to Oldest)</a>
+            <a id="athleteAtoZ"> Name(A to Z)</a>
+            <a id="athleteZtoA"> Name(Z to A)</a>
+            <a id="teamAtoZ"> Team(A to Z)</a>
+            <a id="teamZtoA"> Team(Z to A)</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="top10">
-      <a>
-        <button id="top10-icon"><i class="fa-solid fa-star"></i><br>Top 10</button>
-      </a>
-    </div>
-    <br>
-    <br>
+      <div class="top10">
+        <a>
+          <button id="top10-icon"><i class="fa-solid fa-star"></i>Top 10</button>
+        </a>
+      </div>
+    </section>
+    
     <main>
       <div id="general">
         <div id="pet1"><img id="petTom"
-            src="https://img.olympicchannel.com/images/image/private//f_auto/primary/fcw7olxhvuieykn0xyej"> </div>
-        <div id="athletes-info"></div>
+            src="https://img.olympicchannel.com/images/image/private//f_auto/primary/fcw7olxhvuieykn0xyej">
+        </div>
+        <div id="athletes-info">
+        </div>
         <div id="pet2"><img id="petgreen"
-            src="https://i.pinimg.com/originals/2f/40/db/2f40db15613dd4e8ae7d2ea7778804f9.png"> </div>
+            src="https://i.pinimg.com/originals/2f/40/db/2f40db15613dd4e8ae7d2ea7778804f9.png">
+        </div>
       </div>
     </main>
 

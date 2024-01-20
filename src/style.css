@@ -1,36 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
 * {
     font-family: 'Montserrat Alternates', sans-serif;
 }
-.page {
-    display: none; 
+
+body {
+    margin: 0;
+    margin-bottom: 50px;
 }
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.page {
+    display: none;
+}
+
 .page.active {
     display: block;
 }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: #EBEBEB;
     height: 85px;
 }
+
 .container .heading1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 #logo2016 {
     display: flex;
     justify-content: center;
     line-height: 140px;
     height: 140px;
 }
+
 .navigation-page {
     display: flex;
     align-items: center;
-    margin-left: auto ;
 }
+
 .navigation-page a {
     text-decoration: none;
     color: black;
@@ -38,35 +59,41 @@
     font-size: larger;
     padding: 50px;
 }
+
 .navigation-page a:hover {
-    display: flex;
-    align-items: center;
+
     background-color: #D3D3D3;
     height: 10px;
 }
+
 .container .filter-icon label {
     font-size: 30px;
     padding: 20px;
     cursor: pointer;
 }
+
 #filter-button {
     display: none;
 }
+
 .filter-container {
     display: flex;
     align-items: start;
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;left: 0;
+    top: 0;
+    left: 0;
     opacity: 0;
     visibility: hidden;
-    z-index: 99999
+    z-index: 1;
 }
-#filter-button:checked ~ .filter-container {
+
+#filter-button:checked~.filter-container {
     opacity: 1;
     visibility: visible;
 }
+
 .filter-container .filter-categories {
     display: flex;
     align-items: start;
@@ -76,109 +103,167 @@
     height: 1500px;
     position: relative;
 }
-.filter-container .filter-categories aside a{
+
+.filter-container .filter-categories aside a {
     display: block;
     text-decoration: none;
     padding: 20px;
     color: white;
     border-left: 5px solid transparent;
 }
-.filter-container .filter-categories aside a:hover{
+
+.filter-container .filter-categories aside a:hover {
     background: #2d2d2d;
     border-left: 5px solid #dddada
 }
-.filter-container .filter-categories label{
+
+.filter-container .filter-categories label {
     position: absolute;
     right: 5px;
     top: 10px;
     cursor: pointer;
     font-size: 18px;
-    color:white;
-}   
-#fondo{
+    color: white;
+}
+
+#fondo {
     display: none;
 }
-#general {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+
+.athletes-title {
+    text-align: center;
+    margin: 40px;
 }
+
+.sort-top10 {
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+    align-content: center;
+}
+
+.sort-top10 #top10-icon,
+.sort-top10 .order {
+
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    padding: 15px;
+    border: none;
+}
+
+.sort-top10 #top10-icon:hover,
+.sort-top10 .order:hover,
+#clear:hover {
+    background-color: #4138c4d0;
+}
+
+#general {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 50px;
+    margin-top: 30px;
+}
+
 #athletes-info {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: auto;
     gap: 50px;
     line-height: 1.3;
 }
-#pet1 {
-    display: flex;
-    align-items: start;
-    top: 200px;
-    left: 0px;
-}
-#petTom {
-    margin-left: none;
-    margin-top: 180px;
-    width: 350px;
-    height: auto;
-    
-}
-#petgreen{
-    margin-top: 140px;
-    width: 200px;
-    height: auto;
-}
-#pet2 {
-    display:flex;
-    align-items: start;
-    top:500px;
-    right: 0px;
-    margin-right: 100px;
-}   
-#pet3 {
-    display:flex;
-    align-items: start;
-    height: 150px;
-    width: auto;
-    padding-top: 200px;
-}
-#pets-together{
-    margin-top: 50px;
-    width: 350px;
-    height: auto;
-}
-#petestad {
-    margin-top: 100px;
-    width: 450px;
-    height: auto;
-}
 
-.filter-selection{
-    list-style: none;
-}
+@keyframes reveal-athletes {
+    from {
+        opacity: 0;
+        transform: translateY(80px) scale(0.7);
+    }
 
-.filter-selection a{
-    cursor: pointer;
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .cartilla {
     border: 2px solid #c4d2e3;
     padding: 15px;
     border-radius: 10px;
-    background-color: rgba(227, 232, 252, 0.269); /*para que el fondo sea un poco transparente*/
+    background-color: rgba(227, 232, 252, 0.269);
+    animation: reveal-athletes linear both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+
 }
-#imgOficial {
+
+.cartilla:hover {
+    background-color: rgba(7, 154, 252, 0.192);
+}
+
+#pet1,
+#pet2 {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 100px;
+}
+
+#petTom {
+    margin-left: none;
+    margin-top: 180px;
+    width: 350px;
+    height: auto;
+
+}
+
+#petgreen {
+    margin-top: 140px;
+    width: 200px;
+    height: auto;
+}
+
+#pet3 {
+    display: flex;
+    align-items: start;
     height: 150px;
-    width: 500px;
-    margin-top: 25px;
+    width: auto;
+    padding-top: 200px;
 }
-#img-container {
+
+#pets-together {
+    margin-top: 50px;
+    width: 350px;
+    height: auto;
+}
+
+#petestad {
+    margin-top: 100px;
+    width: 450px;
+    height: auto;
+}
+
+.filter-selection {
+    list-style: none;
+}
+
+.filter-selection a {
+    cursor: pointer;
+}
+
+#imgOficial {
     display: flex;
     justify-content: center;
+    height: 60px;
 }
+
 .search-container {
     display: flex;
     justify-content: center;
+    gap: 16px;
 }
+
 .order {
     background-color: #081778d0;
     color: rgba(255, 255, 255, 0.982);
@@ -187,72 +272,76 @@
     cursor: pointer;
     border-radius: 4px;
 }
-.sortOptions a{
+
+.sortOptions a {
     text-decoration: none;
     display: block;
-    color: black;
+    color: white;
     padding: 5px;
 }
+
 .sortOptions a:hover {
-    background-color:white;
+    background-color: rgb(0, 2, 59);
     cursor: pointer;
 }
+
 .sortOptions {
     position: absolute;
     width: 150px;
-    background-color: #f4d4d3; 
+    background-color: #081778d0;
     display: none;
 }
-.sortBy:hover .sortOptions{
+
+.sortBy:hover .sortOptions {
     display: block;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 4px;
 }
+
 .sortBy {
     position: absolute;
 }
-#boxSortBy {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente los botones */
-    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-}
-#boxSortBy .order {
-    margin-right: 200px; /* Añade un espacio entre los botones */      
-}
+
+
 #general2 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
+
 #topContainer {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     line-height: 1.3;
     margin-top: 75px;
     margin-right: 50px;
     margin-left: 10px;
 }
+
 #search-bar {
-    width: 200px;
     padding: 8px;
     border: 1.5px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
-  }
+}
+
 #clear {
     background-color: #081778d0;
     color: rgba(255, 255, 255, 0.982);
     padding: 8px;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 #generalStats {
-   display: flex;
+    display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-  
+
 #statisticsCont {
     display: flex;
     justify-content: center;
@@ -286,56 +375,58 @@
     font-size: 30px;
 }
 
-.top10 {
-    display: flex;
-    justify-content: center; 
-    margin-left: 200px;
-  }
-  
+
+
 .top10 button {
-    position: relative;
+
     display: flex;
     flex-direction: column;
-    line-height: 4px;
+    line-height: 16px;
     align-items: center;
     background-color: #081778d0;
     color: #FFDC0C;
     font-weight: bolder;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-  }
+    border-radius: 100%;
+
+}
 
 .top10 :hover {
     cursor: pointer;
 }
+
 .top10 a {
     text-decoration: none;
 }
+
 .imagen-atleta {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px; 
+    width: 100px;
     border-radius: 50%;
 }
+
 .homeButton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
+
 .homeButton .homeBtn {
     border: none;
     color: #081778d0;
-    background-color:#FFFEFF;
+    background-color: #FFFEFF;
 }
+
 .homeButton .fa-house {
     font-size: 29px;
 }
+
 .homeBtn :hover {
     cursor: pointer;
 }
+
 #pet4 {
     height: 350px;
     width: auto;
@@ -344,6 +435,7 @@
     flex: 0 0 auto;
     margin-left: 50px;
 }
+
 #pet5 {
     height: 350px;
     width: auto;
@@ -351,20 +443,24 @@
     padding-top: 170px;
     flex: 0 0 auto;
 }
+
 #imgoro {
     height: 250px;
     width: auto;
 }
+
 #imgplata {
     padding-top: 19px;
     height: 220px;
     width: auto;
 }
+
 #imgbronce {
     padding-top: 19px;
     height: 220px;
     width: auto;
 }
+
 #pet3 {
     margin-left: 5px;
     margin-right: none;
@@ -372,66 +468,75 @@
 }
 
 @media (max-width: 1290px) {
+
     /*Contenedor superior*/
-    .container{
+    .container {
         height: 105px;
     }
+
     .container .filter-icon label {
         font-size: 70px;
         padding: 20px;
         cursor: pointer;
     }
-    #logo2016{
+
+    #logo2016, #imgOficial {
         height: 250px;
         width: auto;
     }
-    .navigation-page a{
+
+    .navigation-page a {
         font-size: xx-large;
         padding: 50px;
     }
+
     .filter-container .filter-categories {
         max-width: 400px;
         height: 2500px;
-    }  
-    .filter-container .filter-categories aside a{
+    }
+
+    .filter-container .filter-categories aside a {
         padding: 40px;
         font-size: xx-large;
     }
-    .filter-container .filter-categories label{
+
+    .filter-container .filter-categories label {
         font-size: 80px;
-    }   
-    #imgOficial{
-        height: 220px;
+    }
+
+    #imgOficial {
+        height: 250px;
         width: auto;
     }
+
     /*Pagina Atletas*/
     #search-bar {
         width: 450px;
         height: 50px;
         font-size: x-large;
     }
-    #clear{
+
+    #clear {
         height: 70px;
         font-size: x-large;
     }
-    .order{
-        width: 120px;
-        font-size: x-large;
-    }
-    .sortOptions a{
+
+    .sortOptions a {
         padding: 10px;
         font-size: x-large;
     }
+
     .sortOptions {
         position: absolute;
         width: 200px;
     }
-    .top10 button {
+
+    /* .top10 button {
         width: 120px;
         height: 50px;
         font-size: large;
-    }
-    #pet1{
+    }*/
+    /*#pet1{
         display: none;
     }
     #pet2{
@@ -440,6 +545,7 @@
     #athletes-info{
         font-size: x-large;
         grid-template-columns: repeat(2, 1fr);
+        padding: 16px 32px;
         gap: 50px;
         margin-left: 17px;
         margin-right: 17px;
@@ -451,45 +557,54 @@
         grid-template-columns: 1fr;
         grid-gap: 25px;
     }
+
     #general2 {
         display: flex;
         flex-direction: row;
     }
+
     #general2 #pet3 {
         order: -1;
         margin-bottom: 10px;
         position: sticky;
         top: 0;
     }
+
     /*Pagina Estadisticas*/
     .headingStats {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: xx-large;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
+
     .homeButton .fa-house {
         font-size: 50px;
     }
-    #pet4{
-        padding-top:10px;
+
+    #pet4 {
+        padding-top: 10px;
         height: 470px;
     }
+
     #generalStats {
         display: flex;
         flex-wrap: wrap;
     }
-    #statisticsCont{
+
+    #statisticsCont {
         padding-top: 50px;
         padding-left: 30px;
     }
-    .cardsAth{
+
+    .cardsAth {
         border: 2px solid #ccc;
         padding: 20px;
         border-radius: 10px;
     }
-     #pet5{
+
+    #pet5 {
         padding-top: 25px;
         padding-left: 170px;
     }
