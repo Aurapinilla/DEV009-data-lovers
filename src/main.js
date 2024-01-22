@@ -41,13 +41,6 @@ clear.addEventListener('click', () => {
 const cardsContainer = document.getElementById('athletes-info');
 cardsContainer.innerHTML = generateCards(dataArr);
 
-//FILTRAR TEAM
-//Filtrar por Team/Italy
-function fteam(team, pais) {
-  const funcData = filterTeam(team, pais);
-  const createHTML = generateCards(funcData);
-  return createHTML;
-}
 
 //Ordenar por
 document.getElementById("oldestToYoungest").addEventListener("click", () => {
@@ -69,7 +62,14 @@ document.getElementById("teamZtoA").addEventListener("click", () => {
   cardsContainer.innerHTML = generateCards(sortData.sortbyCountryZtoA(dataArr));
 });
 
-//FILTRAR TEAM
+
+//FILTRAR
+//Filtrar por Team/Italy
+function fteam(team, pais) {
+  const funcData = filterTeam(team, pais);
+  const createHTML = generateCards(funcData);
+  return createHTML;
+}
 document.getElementById('Italy').addEventListener('click', () =>
   cardsContainer.innerHTML = fteam(dataArr, 'Italy')
 );
@@ -143,7 +143,7 @@ function newCards(datos) {
   const cardsTop = datos.map((atleta, index) => {
     const { name, team, gold, bronze, silver } = atleta;
     const imageUrl = obtenerUrlImagen(index); // Obtener la URL de la imagen según el índice de la cartilla
-    return `<div class="cartilla" id="cartilla-${index}">
+    return `<div class="cartilla-top10" id="cartilla-${index}">
         <img src="${imageUrl}" alt="${name}" class="imagen-atleta">
         <p><strong>name:</strong> ${name}</p>
         <p><strong>team:</strong> ${team}</p>
@@ -213,20 +213,31 @@ function showPage(pageId) {
   page.classList.add('active');
 }
 
+const filterButton = document.getElementById('tresboton');
+
 document.getElementById("top10-icon").addEventListener("click", function () {
   showPage('top-athletes-page');
+  filterButton.style.visibility = 'hidden';
 });
 document.getElementById("home-icon").addEventListener("click", function () {
   showPage('athletes-page');
+  filterButton.style.visibility = 'visible';
 });
 document.getElementById("Statistics").addEventListener("click", function () {
   showPage('statistics-page');
+  filterButton.style.visibility = 'hidden';
 });
 document.getElementById("Athletes").addEventListener("click", function () {
   showPage('athletes-page');
+  filterButton.style.visibility = 'visible';
 });
 document.getElementById("home-icon2").addEventListener("click", function () {
   showPage('athletes-page');
+  filterButton.style.visibility = 'visible';
+});
+document.getElementById("Top10Athletes").addEventListener("click", function () {
+  showPage('top-athletes-page');
+  filterButton.style.visibility = 'hidden';
 });
 
 //ESTADISTICA
